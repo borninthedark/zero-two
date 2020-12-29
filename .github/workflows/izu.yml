@@ -22,7 +22,7 @@ jobs:
         uses: docker/login-action@v1 
         with:
           registry: ghcr.io/borninthedark/zero-two
-          username: ${{ secrets.CR_USERNAME }}
+          username: ${{ github.repository_owner }}
           password: ${{ secrets.CR_PAT }}
       -
         name: Build and push
